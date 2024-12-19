@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Recommendations</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="recommendations.html">Recommendations</a>
+        <a href="rsvp.html">RSVP</a>
+    </nav>
+    <main>
+        <section id="hotels">
+            <h2>Hotel Recommendations</h2>
+            <ul>
+                <li>
+                    <img src="hotel-a.jpg" alt="Hotel A">
+                    <p>Hotel A</p>
+                </li>
+                <li>
+                    <img src="hotel-b.jpg" alt="Hotel B">
+                    <p>Hotel B</p>
+                </li>
+                <li>
+                    <img src="hotel-c.jpg" alt="Hotel C">
+                    <p>Hotel C</p>
+                </li>
+            </ul>
+        </section>
+        <section id="dining">
+            <h2>Dining Recommendations</h2>
+            <ul>
+                <li>
+                    <img src="restaurant-x.jpg" alt="Restaurant X">
+                    <p>Restaurant X</p>
+                </li>
+                <li>
+                    <img src="restaurant-y.jpg" alt="Restaurant Y">
+                    <p>Restaurant Y</p>
+                </li>
+                <li>
+                    <img src="restaurant-z.jpg" alt="Restaurant Z">
+                    <p>Restaurant Z</p>
+                </li>
+            </ul>
+        </section>
+        <section id="map">
+            <h2>Map</h2>
+            <div class="map" id="map"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Bar Mitzvah Celebration</p>
+    </footer>
+    <script>
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: -34.397, lng: 150.644},
+                zoom: 8
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</body>
+</html>
